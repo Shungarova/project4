@@ -1,0 +1,20 @@
+def check_investment(x, a, b):
+    if a >= x and b >= x:
+        return 2
+    elif a >= x or b >= x:
+        return 1
+    else:
+        return 0
+x = int(input("Введите минимальную сумму инвестиций: "))
+a = int(input("Сколько денег у Майкла: "))
+b = int(input("Сколько денег у Ивана: "))
+result = check_investment(x, a, b)
+if result == 2:
+    print("Оба могут вложиться")
+elif result == 1:
+    if a >= x:
+        print("Майкл может вложиться")
+    else:
+        print("Иван может вложиться")
+else:
+    print("Никто не может вложиться")
